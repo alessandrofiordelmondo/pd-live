@@ -1,0 +1,32 @@
+# COMMENTS;
+# @ number of the cue;
+# | title of the cue;
+# ! cue messages;
+# ____________________________________;
+
+@ 000;
+| INITIALIZATION;
+! p01-soundfile 1 ./sounds/1.aif; 
+! p01-soundfile 2 ./sounds/2.aif;  
+! p01-soundfile 3 ./sounds/3.aif; 
+! p01-gain 1 1;
+! p01-gain 2 1;
+! p01-gain 3 1;
+# comment something;
+
+@ 101;
+| play first file audio;
+! p01-play 1 1;
+! p01-fade 1 1 1000;
+
+@ 201;
+| play second file audio;
+! p01-play 2 1;
+! p01-fade 2 1 1000;
+
+@ 301;
+| play second file audio;
+! p01-play 3 1;
+! p01-fade 3 1 1000;
+
+@ end;
