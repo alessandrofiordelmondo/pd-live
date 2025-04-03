@@ -11,21 +11,20 @@ Pure Date patches for Live Electronics
 In the main folder you can add the main project and cue lists.
 The patcher *main.pd* is a standard environment proposed by the authors.
 
-### controls
+### data folder
 
-The *Controls* folder contains abstractions to control your patch.
-> - **l.cue.pd** cue list reader
+The *data* folder contains abstractions working at control rate speed.
+All objects are named le.*obj*.pd.
 
-### DSP_obj
+### DSP
 
-The *DSP_obj* folder contains all signal processing abstractions.
-> - **l.play.pd** subpatch to l.player~.pd
-> - **l.player~.pd** audio file reader.
+The *DSP* folder contains all signal processing abstractions.
+All objects are named le.*obj*~.pd.
 
-### logic
+### utility
 
-The *logic* folder contains basic abstractions with specific functions needed for other abstractions.
-> - **counter.pd** when it receives a bang, counts fom *min* to *max* with a given *pace*.
+The *utility* folder contains basic abstractions with specific tasks.
+All objects are named u.*obj*.pd.
 
 ### sounds
 
