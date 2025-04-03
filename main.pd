@@ -1,5 +1,5 @@
 #N canvas 629 799 1302 660 12;
-#X declare -path ./DSP_obj -path ./logic -path ./controls -path ./sounds;
+#X declare -path ./data -path ./DSP -path ./utility -path ./sounds;
 #X obj 513 48 s cue-forward;
 #X obj 513 24 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 611 48 s cue-init;
@@ -9,9 +9,9 @@
 #X obj 8 353 dac~;
 #X obj 688 48 s cue-file;
 #X msg 688 24 cue.txt;
-#X obj 9 7 l.cue;
-#X obj 8 79 l.player~ p01 8;
-#X obj 774 35 declare -path ./DSP_obj -path ./logic -path ./controls -path ./sounds, f 37;
+#X obj 9 7 le.cue;
+#X obj 8 79 le.player~ p01 8;
+#X obj 774 35 declare -path ./data -path ./DSP -path ./utility -path ./sounds, f 37;
 #X connect 1 0 0 0;
 #X connect 3 0 2 0;
 #X connect 4 0 6 1;

@@ -1,4 +1,5 @@
-#N canvas 0 25 1920 1027 12;
+#N canvas 554 263 1920 1027 12;
+#X declare -path ../utility;
 #X obj 12 113 soundfiler;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array \$1-snd 144000 float 2;
@@ -319,6 +320,7 @@
 #X msg 321 793 \$1 10;
 #X obj 1756 312 r \$1-grana-vol;
 #X obj 1794 190 r \$1-grana-rec;
+#X obj 1683 22 declare -path ../utility;
 #X connect 0 0 3 0;
 #X connect 0 0 69 0;
 #X connect 0 1 4 0;
