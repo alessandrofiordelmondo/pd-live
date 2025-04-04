@@ -40,7 +40,7 @@
 | carica grancassa;
 ! p01-soundfile 2 grancassa.wav;
 
-@ 401;
+@ 402;
 | play grancassa;
 ! p01-play 2 1;
 ! p01-fade 2 1 1000;
