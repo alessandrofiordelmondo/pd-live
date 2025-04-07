@@ -30,7 +30,7 @@
 #X msg 371 366 [abc-player~] I still have to write the help!;
 #X msg 207 418 1;
 #X obj 200 116 loadbang;
-#X obj 26 145 clone l.play \$2;
+#X obj 26 145 clone l0.play \$2;
 #X connect 0 0 31 0;
 #X connect 2 0 31 1;
 #X connect 4 0 31 2;
