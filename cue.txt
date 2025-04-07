@@ -9,9 +9,9 @@
 
 @ 000;
 | INITIALIZATION;
-! p01-soundfile 1 ./sounds/1.aif; 
-! p01-soundfile 2 ./sounds/2.aif;  
-! p01-soundfile 3 ./sounds/3.aif; 
+! p01-soundfile 1 1.aif; 
+! p01-soundfile 2 2.aif;  
+! p01-soundfile 3 3.aif; 
 ! p01-gain 1 1;
 ! p01-gain 2 1;
 ! p01-gain 3 1;
@@ -29,12 +29,21 @@
 
 @ 301;
 | play second file audio;
-! p01-soundfile 1 ./sounds/1.aif; 
+! p01-soundfile 1 1.aif; 
 ! p01-play 1 1;
 ! p01-fade 1 1 1000;
 ' 5000;
 ! p01-play 3 1;
 ! p01-fade 3 1 1000;
+
+@ 401;
+| carica grancassa;
+! p01-soundfile 2 grancassa.wav;
+
+@ 402;
+| play grancassa;
+! p01-play 2 1;
+! p01-fade 2 1 1000;
 
 
 @ 999;
