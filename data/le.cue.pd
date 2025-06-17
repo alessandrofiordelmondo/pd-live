@@ -1,6 +1,6 @@
 #N canvas 640 75 794 832 12;
 #X obj 254 168 text define -k my-cue;
-#A set # ____________________________________ \; # # COMMENT \; # @ NUMBER of the cue \; # | TITLE of the cue \; # ! CUE messages \; # ' DELAY # Always finish with \; # ____________________________________ \; @ 0 \; | INITIALIZATION \; ! p01-soundfile 1 ./sounds/1.aif \; ! p01-soundfile 2 ./sounds/2.aif \; ! p01-soundfile 3 ./sounds/3.aif \; ! p01-gain 1 1 \; ! p01-gain 2 1 \; ! p01-gain 3 1 \; # comment something \; @ 101 \; | play first file audio \; ! p01-play 1 1 \; ! p01-fade 1 1 1000 \; @ 201 \; | play second file audio \; ! p01-play 2 1 \; ! p01-fade 2 1 1000 \; @ 301 \; | play second file audio \; ! p01-play 3 1 \; ! p01-fade 3 1 1000 \; ' 5000 ! p01-play 2 1 \; ! p01-fade 2 1 1000 \; @ 999 \; | END;
+#A set # ____________________________________ \; # # COMMENT \; # @ NUMBER of the cue \; # | TITLE of the cue \; # ! CUE messages \; # ' DELAY # Always finish with \; # ____________________________________ \; @ 0 \; | INITIALIZATION \; ! pd dsp 1 \; # comment something \; @ 101 \; | play first file audio \; ! p01-play 1 1 \; ! p01-fade 1 1 1000 \; @ 201 \; | play second file audio \; ! p01-play 2 1 \; ! p01-fade 2 1 1000 \; @ 301 \; | play second file audio \; ! p01-soundfile 1 1.aif \; ! p01-play 1 1 \; ! p01-fade 1 1 1000 \; ' 5000 \; ! p01-play 3 1 \; ! p01-fade 3 1 1000 \; @ 401 \; | carica grancassa \; ! p01-soundfile 2 grancassa.wav \; @ 402 \; | play grancassa \; ! p01-play 2 1 \; ! p01-fade 2 1 1000 \; @ 999 \; | END;
 #X msg 397 84 clear;
 #X msg 80 163 -1;
 #X obj 80 135 loadbang;
@@ -46,6 +46,7 @@
 #X obj 273 376 delay;
 #X obj 273 339 t b f;
 #X obj 390 360 print delay;
+#X obj 88 663 list trim;
 #X connect 1 0 0 0;
 #X connect 2 0 36 1;
 #X connect 3 0 2 0;
@@ -73,7 +74,7 @@
 #X connect 24 0 9 0;
 #X connect 25 0 28 0;
 #X connect 25 1 27 1;
-#X connect 27 0 26 0;
+#X connect 27 0 46 0;
 #X connect 28 0 27 0;
 #X connect 28 1 26 1;
 #X connect 29 0 38 0;
@@ -99,4 +100,5 @@
 #X connect 44 0 43 0;
 #X connect 44 1 43 1;
 #X connect 44 1 45 0;
+#X connect 46 0 26 0;
 #X coords 0 -1 1 1 500 60 2 200 450;
