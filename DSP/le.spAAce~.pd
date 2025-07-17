@@ -136,6 +136,7 @@
 #X obj 513 288 t f b;
 #X obj 790 585 snake~ 12, f 29;
 #X obj 790 609 throw~ io-output 12;
+#X msg 19 86;
 #X connect 0 0 45 0;
 #X connect 0 1 46 0;
 #X connect 0 2 47 0;
@@ -192,6 +193,7 @@
 #X connect 22 0 55 1;
 #X connect 22 0 56 1;
 #X connect 24 0 35 0;
+#X connect 24 0 74 0;
 #X connect 26 0 35 0;
 #X connect 26 0 59 0;
 #X connect 28 0 23 0;
