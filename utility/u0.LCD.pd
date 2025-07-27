@@ -1,4 +1,4 @@
-#N canvas -8 0 1278 1083 12;
+#N canvas 0 0 1278 1083 12;
 #X listbox 174 673 55 0 0 0 - - - 0;
 #X obj 167 613 list append 247;
 #X obj 167 589 list prepend 240 0 32 50 21 76;
@@ -17,7 +17,7 @@
 #X text 422 525 cc: bits 0-2: backlight color (black \, red \, green \, yellow \, blue \, magenta \, cyan \, white) cc: bit 4: invert upper half of LCD cc: bit 5: invert lower half of LCD;
 #X text 276 525 CC----------------->;
 #X obj 409 420 array define -k -yrange 0 255 \$0_text_01 14;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#A 0 95 70 114 111 110 116 95 49 45 50 0 0 0 0;
 #X obj 188 427 array set \$0_text_01;
 #X obj 165 455 array get \$0_text_01;
 #X obj 166 528 list prepend 1;
@@ -49,6 +49,8 @@
 #X obj 420 37 savestate;
 #X obj 515 153 pack s f f f;
 #X obj 420 61 unpack s f f f;
+#X obj 113 4 loadbang;
+#X obj 113 28 del 500;
 #X connect 0 0 10 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -96,4 +98,6 @@
 #X connect 48 1 23 0;
 #X connect 48 2 33 0;
 #X connect 48 3 35 0;
+#X connect 49 0 50 0;
+#X connect 50 0 7 0;
 #X coords 0 -1 1 1 180 200 1 100 50;
