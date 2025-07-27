@@ -1,9 +1,9 @@
-#N canvas 443 429 1920 1027 12;
+#N canvas 135 489 1920 1027 12;
 #X declare -path ../utility;
 #X obj 12 113 soundfiler;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array \$1-snd 1.39078e+07 float 2;
-#X coords 0 1 1.39078e+07 -1 255 50 1 0 0;
+#X array \$1-snd 258385 float 2;
+#X coords 0 1 258385 -1 255 50 1 0 0;
 #X restore 1486 376 graph;
 #X obj 1489 376 hsl 250 50 0 1000 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X floatatom 11 139 7 0 0 0 - - - 12;
@@ -312,7 +312,7 @@
 #X obj 940 338 list prepend set;
 #X obj 940 362 list trim;
 #X obj 382 197 r \$1-sr;
-#X obj 256 14 r \$1-open-file;
+#X obj 280 7 r \$1-open-file;
 #X connect 0 0 3 0;
 #X connect 0 0 62 0;
 #X connect 0 1 4 0;
